@@ -52,7 +52,7 @@ class CosUpload_Plugin implements Typecho_Plugin_Interface
 
     public static function getClientOptions()
     {
-        $options = Typecho_Widget::widget('Widget_Options')->plugin('Upload');
+        $options = Typecho_Widget::widget('Widget_Options')->plugin('CosUpload');
 
         return [
             'region' => $options->region,
@@ -106,7 +106,7 @@ class CosUpload_Plugin implements Typecho_Plugin_Interface
 
     public static function attachmentHandle($content)
     {
-        $domain = Typecho_Widget::widget('Widget_Options')->plugin('Upload')->domain;
+        $domain = Typecho_Widget::widget('Widget_Options')->plugin('CosUpload')->domain;
         return Typecho_Common::url($content['attachment']->path, (sprintf("http%s://", Typecho_Request::isSecure() ? 's' : '')) . ltrim($domain, '/'));
     }
 
@@ -120,7 +120,7 @@ class CosUpload_Plugin implements Typecho_Plugin_Interface
     public static function deleteHandle(array $content)
     {
         $client = self::client();
-        $bucket = Typecho_Widget::widget('Widget_Options')->plugin('Upload')->bucket;
+        $bucket = Typecho_Widget::widget('Widget_Options')->plugin('CosUpload')->bucket;
 
         try {
 
