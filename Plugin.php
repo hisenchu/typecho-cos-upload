@@ -67,7 +67,7 @@ class CosUpload_Plugin implements Typecho_Plugin_Interface
     public static function uploadHandle($file)
     {
 
-        $bucket = Typecho_Widget::widget('Widget_Options')->plugin('Upload')->bucket;
+        $bucket = Typecho_Widget::widget('Widget_Options')->plugin('CosUpload')->bucket;
         if ( ! $bucket ) {
             return false;
         }
