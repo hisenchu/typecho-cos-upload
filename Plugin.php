@@ -1,10 +1,10 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /**
- * COS Service-Based Upload Plugin
+ * 基于腾讯 COS 服务的附件上传插件
  *
  * @package CosUpload
- * @version 0.1.0
+ * @version 0.1.1
  * @author Manic Rabbit
  * @link https://manicrabbit.com
  */
