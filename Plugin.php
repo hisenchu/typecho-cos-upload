@@ -5,8 +5,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  *
  * @package CosUpload
  * @version 0.1.1
- * @author Manic Rabbit
- * @link https://manicrabbit.com
+ * @author Hisen Chu
+ * @link https://hisenchu.com
  */
 
 class CosUpload_Plugin implements Typecho_Plugin_Interface
